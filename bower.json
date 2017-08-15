@@ -1,11 +1,12 @@
 {
-  "name": "sphinx-rtd-theme",
+  "name": "sphinx-stb-theme",
   "version": "0.2.4",
-  "homepage": "https://github.com/rtfd/sphinx_stb_theme",
+  "homepage": "https://github.com/starberry/sphinx_stb_theme",
   "authors": [
-    "Dave Snider <dave.snider@gmail.com>"
+    "Dave Snider <dave.snider@gmail.com>",
+    "Tom Gidden <gid@starberry.tv>"
   ],
-  "description": "Sphinx theme for readthedocs.org.",
+  "description": "Sphinx theme for Starberry internal documentation.",
   "license": "MIT",
   "main": [
     "js/theme.js"
@@ -30,12 +31,10 @@
     "wyrm": "~1.0.x"
   },
   "dependencies": {
-    "lato-googlefont": "*",
-    "robotomono-googlefont": "*",
-    "roboto-googlefont": "*",
-    "robotoslab-googlefont": "*",
-    "inconsolata-googlefont": "*",
-    "font-awesome": "~4.7"
+    "font-awesome": "~4.7",
+    "easyfont-roboto": "easyfont/roboto",
+    "easyfont-roboto-mono": "easyfont/roboto-mono",
+    "easyfont-roboto-slab": "easyfont/roboto-slab"
   },
   "resolutions": {
     "font-awesome": "~4.7"

@@ -19,6 +19,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     copy: {
       fonts: {
         files: [
@@ -32,26 +33,7 @@ module.exports = function(grunt) {
           {
               expand: true,
               flatten: true,
-              src: ['bower_components/lato-googlefont/Lato-Regular.ttf',
-                    'bower_components/lato-googlefont/Lato-Italic.ttf',
-                    'bower_components/lato-googlefont/Lato-Bold.ttf',
-                    'bower_components/lato-googlefont/Lato-BoldItalic.ttf'],
-              dest: 'sphinx_stb_theme/static/fonts/',
-              filter: 'isFile'
-          },
-          {
-              expand: true,
-              flatten: true,
-              src: ['bower_components/robotoslab-googlefont/RobotoSlab-Bold.ttf',
-                    'bower_components/robotoslab-googlefont/RobotoSlab-Regular.ttf'],
-              dest: 'sphinx_stb_theme/static/fonts/',
-              filter: 'isFile'
-          },
-          {
-              expand: true,
-              flatten: true,
-              src: ['bower_components/inconsolata-googlefont/Inconsolata-Bold.ttf',
-                    'bower_components/inconsolata-googlefont/Inconsolata-Regular.ttf'],
+              src: ['bower_components/easyfont-roboto*/fonts/*'],
               dest: 'sphinx_stb_theme/static/fonts/',
               filter: 'isFile'
           }
@@ -124,6 +106,22 @@ module.exports = function(grunt) {
       fonts: ["sphinx_stb_theme/static/fonts"]
     },
 
+    compress: {
+      main: {
+        options: {
+          archive: '../sphinx_stb_theme.zip'
+        },
+        files: [
+          {
+            src: ['**'],
+            dest: '/',
+            cwd: 'sphinx_stb_theme/',
+            expand: true
+          }
+        ]
+      }
+    },
+
     watch: {
       /* Compile sass changes into theme directory */
       sass: {
@@ -139,11 +137,6 @@ module.exports = function(grunt) {
       browserify: {
         files: ['js/*.js'],
         tasks: ['browserify:dev']
-      },
-      /* live-reload the demo_docs if sphinx re-builds */
-      livereload: {
-        files: ['demo_docs/build/**/*'],
-        options: { livereload: true }
       }
     }
 
@@ -155,6 +148,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-browserify');
 
