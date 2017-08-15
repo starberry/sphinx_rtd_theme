@@ -2,6 +2,10 @@
 // that are set in wyrm_core/wy_variables.sass. You'll find wyrm in bower_components if you're looking
 // for a reference.
 
+
+$superberry-bg: #1b093f
+
+
 $font-awesome-dir:                    "../fonts/"
 $static-img:                          "../img/"
 $mathjax-color:                       $text-color
@@ -11,6 +15,9 @@ $headerlink-color:                    $text-color
 // Code colors
 $text-viewcode-color:                 $green
 $text-codexref-color:                 $text-color
+
+$text-code-color:                     $black
+$text-code-background-color:          #eeeeee
 
 // Definition list colors
 $class-color:                         $blue
@@ -23,25 +30,33 @@ $guilabel-color:                      $blue
 $footer-color:                        $text-medium
 
 // Menu colors
-$menu-vertical-background-color:      $section-background-color
+//$menu-vertical-background-color:      $section-background-color
+
+$menu-vertical-background-color: $superberry-bg
+
 
 // Menu text colors
-$menu-color:                          $gray
-$menu-dark:                           lighten($menu-color,10%) !default
-$menu-medium:                         lighten($menu-color,25%) !default
-$menu-light:                          lighten($menu-color,45%) !default
-$menu-lighter:                        lighten($menu-color,60%) !default
+$menu-light:                          #c3b3d3
+$menu-lighter:                        lighten($menu-light,20%) !default
+$menu-medium:                         darken($menu-light,25%) !default
+$menu-dark:                           darken($menu-medium,20%) !default
+$menu-color:                          darken($menu-dark,20%) !default
 
 // Menu link colors
-$menu-link-color:                     $text-color
-$menu-link-dark:                      $text-dark
-$menu-link-medium:                    $text-medium
-$menu-link-light:                     $text-light
-$menu-link-active:                    $white
+//$menu-link-color:                     $text-color
+//$menu-link-dark:                      $text-dark
+//$menu-link-medium:                    $text-medium
+//$menu-link-light:                     $text-light
+//$menu-link-active:                    $white
+$menu-link-color:                     $white
+$menu-link-light:                     #c3b3d3
+$menu-link-medium:                    darken($menu-link-light, 5%)
+$menu-link-dark:                      darken($menu-link-medium, 5%)
+$menu-link-active:                    $menu-link-color
 
 // Navigation colors
-$nav-background-color:                $menu-background-color
-$nav-search-background-color:         $blue
+$nav-background-color:                $superberry-bg
+$nav-search-background-color:         $superberry-bg
 $nav-search-color:                    $section-background-color
 $nav-link-color:                      $blue
 $nav-link-color-visited:              $purple
@@ -56,7 +71,8 @@ $sidebar-title-background-color:      $table-border-color
 // Sphinx highlight color
 $highlight-color:                     $yellow
 
-$base-font-family:                    "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif
-$custom-font-family:                  "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif
-$custom-font-family2:                 Georgia, serif
-$code-font-family:                    Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace
+$base-font-family:                    "Roboto", "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif
+$header-font-family:                  "Roboto", "Palatino"
+$custom-font-family:                  "Roboto", "ff-tisa-web-pro", "Georgia", Arial, sans-serif
+$custom-font-family2:                 "Roboto Slab", Georgia, serif
+$code-font-family:                    "Roboto Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace

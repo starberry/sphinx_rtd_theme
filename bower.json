@@ -1,7 +1,7 @@
 {
   "name": "sphinx-rtd-theme",
   "version": "0.2.4",
-  "homepage": "https://github.com/rtfd/sphinx_rtd_theme",
+  "homepage": "https://github.com/rtfd/sphinx_stb_theme",
   "authors": [
     "Dave Snider <dave.snider@gmail.com>"
   ],
@@ -31,6 +31,8 @@
   },
   "dependencies": {
     "lato-googlefont": "*",
+    "robotomono-googlefont": "*",
+    "roboto-googlefont": "*",
     "robotoslab-googlefont": "*",
     "inconsolata-googlefont": "*",
     "font-awesome": "~4.7"
